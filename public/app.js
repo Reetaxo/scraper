@@ -51,13 +51,10 @@ $(document).on("click", "p", function() {
       method: "POST",
       url: "/articles/" + thisId,
       data: {
-        // Value taken from title input
         title: $("#titleinput").val(),
-        // Value taken from note textarea
         body: $("#bodyinput").val()
       }
     })
-      // With that done
       .then(function(data) {
         // Log the response
         console.log(data);
